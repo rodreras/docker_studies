@@ -15,3 +15,9 @@ This repository contains various Docker projects to demonstrate different use ca
 
 - `streamlit-docker/`
   - `Dockerfile`: Docker configuration for a Streamlit application (not provided in the current workspace).
+
+- `streamlit-local-docker/`
+
+  - `app.py`: Streamlit application script.
+  - `Dockerfile`: Docker configuration for setting up a local Streamlit application with Conda dependencies.
+  - `environment.yaml`: Conda environment configuration file.
