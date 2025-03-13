@@ -1,0 +1,29 @@
+name: rs_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - geopandas
+  - gdal
+  - rasterio
+  - xarray
+  - matplotlib
+  - pandas
+  - seaborn
+  - numpy
+  - geemap
+  - earthengine-api
+  - folium
+  - leafmap
+  - osmnx
+  - h3
+  - jupyter
+  - plotly
+  - pyarrow
+  - pip
+  - pip:
+    - stackstac
+    - pystac-client
+    - quackosm
+    - srai
+  
