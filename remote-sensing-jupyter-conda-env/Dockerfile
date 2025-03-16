@@ -43,17 +43,19 @@ RUN conda init bash && \
     echo "conda activate rs_env" >> /home/$USERNAME/.bashrc
 
 # 4. Setting the workdir
-WORKDIR /workdir
+WORKDIR /workspace/projects
 
-# 5. Create dir for projects and adjust permissions
+# 5. Create the workspace directory and adjust permissions
 RUN mkdir -p /workspace/projects && \
-  chown -R $USERNAME:$USERNAME /workspace
+    chown -R $USERNAME:$USERNAME /workspace/projects
 
 # 6. Change the directory to non-root
 USER $USERNAME
 
-# 7. Define shell as bash
-SHELL [ "/bin/bash", "-c"]
+# 7. Expose Port
+EXPOSE 8888
 
-# 8. Define the enter point of the container
-CMD ["/bin/bash"]
+
+# 8. Define the entry point and command
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "rs_env"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--notebook-dir=/workspace/projects"]

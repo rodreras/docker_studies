@@ -21,3 +21,8 @@ This repository contains various Docker projects to demonstrate different use ca
   - `app.py`: Streamlit application script.
   - `Dockerfile`: Docker configuration for setting up a local Streamlit application with Conda dependencies.
   - `environment.yaml`: Conda environment configuration file.
+
+
+- `remote-sensing-jupyter-conda-env/`
+  - `Dockerfile`: Docker configuration for setting up a Jupyter Notebook environment with Conda dependencies for remote sensing and geospatial projects.
+  - `environment.yaml`: Conda environment configuration file.

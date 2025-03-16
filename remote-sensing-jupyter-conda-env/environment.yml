@@ -18,6 +18,7 @@ dependencies:
   - osmnx
   - h3
   - jupyter
+  - notebook
   - plotly
   - pyarrow
   - pip
@@ -26,4 +27,5 @@ dependencies:
     - pystac-client
     - quackosm
     - srai
+    
   
